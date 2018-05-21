@@ -35,3 +35,35 @@ void merge(int data[], int l, int m, int r)
         k++;
     }
     while (i < k1)
+        {
+        data[k] = kiri[i];
+        i++;
+        k++;
+    }
+    while (j < k2)
+    {
+        data[k] = kanan[j];
+        j++;
+        k++;
+    }
+}
+
+void mergeSort(int data[], int l, int r)
+{
+    if (l < r)
+    {
+
+        int m = l+(r-l)/2;
+        mergeSort(data, l, m);
+        mergeSort(data, m+1, r);
+        merge(data, l, m, r);
+    }
+}
+
+void printArray(int A[], int size)
+{
+    int i;
+    for (i=0; i < 8; i++)
+        cout<<A[i]<<" ";
+cout<<endl;
+}
