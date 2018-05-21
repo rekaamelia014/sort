@@ -67,3 +67,40 @@ void printArray(int A[], int size)
         cout<<A[i]<<" ";
 cout<<endl;
 }
+
+int main (){
+int pilihan;
+int a,b,c,n,i,j,k,m,r,k1,k2,temp;
+int x[100];
+int data [100];
+
+cout<<"Pilihan Sorting"<<endl;
+cout<<"1. Selection Sort"<<endl;
+cout<<"2. Bubble Sort"<<endl;
+cout<<"3. Merge Sort"<<endl;
+cout<<"masukkan pilihan :";
+cin>>pilihan;
+
+switch(pilihan){
+case 1:
+    cout<<"input banyaknya data : ";
+	cin>>n;
+	cout<<" sebelum di urutkan :"<<endl;
+	 for(i=0;i<n;i++){
+	 	cin>>x[i];
+	 }
+	 for(i=0;i<n-1;i++){
+		a=x[i];
+		b=i;
+			for (j=i+1;j<n;j++){
+				if (a>x[j]){
+					a=x[j];
+					b=j;
+				}
+			}
+			c=x[i];
+        x[i]=x[b];
+        x[b]=c;
+    }
+    cout<<"sesudah di urutkan : ";
+	
