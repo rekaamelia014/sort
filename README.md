@@ -1,5 +1,5 @@
 /*program pengurutan data dengan cara Buble Sort, Selection Sort, Merge Sort*/
-
+/* Noverina Ika Tama - 1717051005, Naurah Nadzifah - 1717051032, Reka Amelia - 1717051046, Reda Meiningtiyas - 1717051055*/
 
 #include <iostream>
 using namespace std;
@@ -103,4 +103,48 @@ case 1:
         x[b]=c;
     }
     cout<<"sesudah di urutkan : ";
-	
+	for(i=0;i<n;i++)
+    {
+        cout<<x[i];
+		cout<<" ";
+    }
+    break;
+case 2:
+    cout<<"Masukkan banyak data : ";
+cin>>n;
+cout<<"Masukkan data : "<<endl;
+	for(i=0;i<n;i++)
+	cin>>data[i];
+
+for(i=0;i<n;i++)
+	{
+		for(j=0;j<(n-1);j++)
+			if(data[j]>data[j+1])
+		 {
+		 		temp=data[j];
+		 		data[j]=data[j+1];
+		 		data[j+1]=temp;
+
+		 }
+	}
+
+cout<<"Nilai urutan data : ";
+	for(i=0;i<n;i++)
+	cout<<" "<<data[i];
+break;
+case 3:
+
+    int data[8] ={12, 8, 5, 28, 6, 10, 9, 13};
+    cout<<"data ter-input adalah..."<<endl;
+    for (int i=0 ; i<=7 ; i++) {
+        cout<< data[i]<<" ";
+    }
+mergeSort(data, 0, 8-1);
+    cout<<endl;
+    cout<<"Data telah diurutkan \n"<<endl;
+    printArray(data, 8);
+break;
+}
+return 0;
+}
+
